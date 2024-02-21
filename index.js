@@ -21,3 +21,32 @@ window.addEventListener("scroll", function () {
     navBall.classList.remove("display__nav");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const containers = document.querySelectorAll(
+    ".services-container, .projects-container, .blogs-container"
+  );
+
+  containers.forEach((container) => {
+    const scrollStep = container.clientWidth; // Scroll one container width at a time
+
+    container.previousElementSibling.addEventListener("click", function () {
+      container.scrollBy({
+        left: -scrollStep,
+        behavior: "smooth",
+      });
+    });
+
+    container.nextElementSibling.addEventListener("click", function () {
+      container.scrollBy({
+        left: scrollStep,
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // Disable scrollbars
+  containers.forEach((container) => {
+    container.style.overflowX = "hidden";
+  });
+});
