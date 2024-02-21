@@ -14,18 +14,25 @@
     <title>My Brand</title>
   </head>
   <body class="container">
+    <div class="overlay"></div>
     <header class="nav">
       <a href="#" class="nav__logo">
         <img src="./images/icons/logo.svg" alt="Logo Image" />
       </a>
-      <nav class="nav__links">
-        <a href="" class="nav__links--link">Home</a>
-        <a href="" class="nav__links--link">Services</a>
-        <a href="" class="nav__links--link">Projects</a>
-        <a href="" class="nav__links--link">Blogs</a>
-        <a href="" class="nav__links--link">Contact Me</a>
+      <nav class="header__nav">
+        <a href="#" class="header__nav--link">Home</a>
+        <a href="#blogs" class="header__nav--link">Services</a>
+        <a href="" class="header__nav--link">Projects</a>
+        <a href="" class="header__nav--link">Blogs</a>
+        <a href="" class="header__nav--link">Contact Me</a>
       </nav>
+      <div class="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </div>
     </header>
+
     <section class="hero">
       <div class="hero__content">
         <p class="para">Hey, I’m <span>Abdoulkalim BZ</span></p>
@@ -40,7 +47,7 @@
     </section>
     <section class="services">
       <h2 class="title">Services</h2>
-      <div>
+      <div class="services-container">
         <div class="services__service">
           <figure class="services__service--img">
             <img src="./images/services/1.png" alt="Service image" />
@@ -78,10 +85,15 @@
           <h3 class="mini-title">Artificial Intelligence</h3>
         </div>
       </div>
+      <div class="navigation-indicator">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
     </section>
     <section class="projects">
       <h2 class="title">Projects</h2>
-      <div>
+      <div class="projects-container">
         <div class="projects__project">
           <figure class="projects__project--img">
             <img src="./images/projects/buswise.png" alt="projects image" />
@@ -107,9 +119,14 @@
         </div>
       </div>
     </section>
-    <section class="blogs">
+    <div class="navigation-indicator">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <section class="blogs" id="blogs">
       <h2 class="title">Blogs</h2>
-      <div>
+      <div class="blogs-container">
         <div class="blogs__blog">
           <figure class="blogs__blog--img">
             <img src="./images/blogs/1.png" alt="blog image" />
@@ -125,7 +142,9 @@
               <p class="blogs__blog--impression-comment">70</p>
             </div>
             <div>
-              <a href="./blog.html" class="mini-title read-more">Read more</a>
+              <a href="./pages/blog.html" class="mini-title read-more"
+                >Read more</a
+              >
             </div>
           </div>
         </div>
@@ -144,7 +163,9 @@
               <p class="blogs__blog--impression-comment">70</p>
             </div>
             <div>
-              <a href="./blog.html" class="mini-title read-more">Read more</a>
+              <a href="./pages/blog.html" class="mini-title read-more"
+                >Read more</a
+              >
             </div>
           </div>
         </div>
@@ -166,6 +187,11 @@
         </button>
       </div>
     </section>
+    <div class="navigation-indicator circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
     <section class="contact-me">
       <h2 class="title">Contact Me</h2>
       <div class="contact-me-container">
@@ -214,5 +240,6 @@
         </div>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
