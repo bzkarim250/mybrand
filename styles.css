@@ -455,6 +455,18 @@ textarea::placeholder,
   }
 }
 @media screen and (max-width: 936px) {
+  .hero,
+  .header,
+  .services,
+  .projects,
+  .blogs,
+  .contact,
+  .footer {
+    padding: 1.2rem;
+  }
+  .nav {
+    padding: 1rem 1.3rem;
+  }
   .header__nav {
     display: none;
   }
@@ -475,7 +487,7 @@ textarea::placeholder,
     flex-direction: column;
     justify-content: center;
 
-    padding: var(--padding-content);
+    padding: 1.2rem;
     background-color: var(--color-bg);
     transition: all 0.65s ease-in-out;
     height: 100vh;
@@ -493,7 +505,7 @@ textarea::placeholder,
     width: 3rem;
 
     top: 3.5rem;
-    right: 5rem;
+    right: 3rem;
 
     cursor: pointer;
 
@@ -683,7 +695,7 @@ textarea::placeholder,
   }
 
   .blogs div {
-    width: 30rem;
+    width: 34rem;
   }
 
   .blogs__blog--img {
