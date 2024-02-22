@@ -1,0 +1,129 @@
+/* --------------Login form ------------ */
+
+.login-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, min-content);
+  margin-top: 6rem;
+  padding: 4rem;
+  gap: 2rem;
+}
+.login__title {
+  grid-column: 4/8;
+  grid-row: 1/3;
+}
+.login__form {
+  grid-column: 4/8;
+  grid-row: 6/8;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+}
+.login__form input[type="email"],
+.login__form input[type="password"] {
+  border: 2px solid var(--color-primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.login__form input[type="submit"] {
+  background-color: var(--color-primary);
+  width: 10rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--color-white);
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+}
+.login__form input[type="submit"]:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+input::placeholder,
+textarea::placeholder,
+.login {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-main);
+  text-align: left;
+}
+/* ---------End------------- */
+
+/* --------Footer---------- */
+.footer {
+  grid-column: 1/-1;
+  grid-row: 9/-1;
+  position: relative;
+  gap: 10rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer-content {
+  padding: 1rem;
+}
+/* ------------End--------- */
+
+/* --------Responsivenes--------- */
+@media screen and (max-width: 1100px) {
+  .login-container,
+  .login__form {
+    grid-column: 4/9;
+  }
+  .login__form {
+    grid-column: 4/9;
+  }
+}
+@media screen and (max-width: 860px) {
+  .login__title {
+    grid-column: 3/10;
+  }
+  .login-container,
+  .login__form {
+    grid-column: 3/10;
+  }
+}
+@media screen and (max-width: 540px) {
+  .login__title {
+    grid-column: 2/10;
+  }
+  .login-container,
+  .login__form {
+    grid-column: 2/10;
+  }
+}
+@media screen and (max-width: 480px) {
+  .login__title {
+    grid-column: 1/10;
+  }
+  .login-container,
+  .login__form {
+    grid-column: 1/10;
+  }
+}
+@media screen and (max-width: 370px) {
+  .login__title {
+    padding: 1rem;
+  }
+  .login-container,
+  .login__form {
+    width: 30rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .login__form input[type="email"],
+  .login__form input[type="password"] {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 275px) {
+  .login__form input[type="email"],
+  .login__form input[type="password"] {
+    width: 20rem;
+  }
+}

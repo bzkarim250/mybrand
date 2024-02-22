@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <title>My Brand</title>
+  </head>
+  <body class="container">
+    <div class="overlay"></div>
+    <header class="nav">
+      <a href="/index.html" class="nav__logo">
+        <img src="/images/icons/logo.svg" alt="Logo Image" />
+      </a>
+    </header>
+    <section class="login">
+      <div class="login-container">
+        <h3 class="title login__title">Login to your account</h3>
+        <form action="./dashboard.html" class="login__form">
+          <input
+            type="email"
+            placeholder="Email or password"
+            class="mini-title"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="mini-title"
+            required
+          />
+          <input type="submit" value="Login" class="mini-title" />
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <figure class="footer-logo">
+          <img src="/images/icons/logo.svg" alt="logo image" />
+        </figure>
+        <div class="footer__copy-right">
+          <p class="para copy-right">© 2024 Bzkarim</p>
+        </div>
+        <div class="footer__socials">
+          <a href="#">
+            <img src="/images/icons/x-twitter.svg" alt="Twitter icon" />
+          </a>
+          <a href="#">
+            <img src="/images/icons/linkedin.svg" alt="LinkedIn icon" />
+          </a>
+          <a href="#">
+            <img src="/images/icons/mdi_github.svg" alt="GitHub icon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>
