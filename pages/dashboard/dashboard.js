@@ -28,6 +28,8 @@ updateButton.forEach((button) => {
   });
 });
 
+// Add blog Popup
+
 addNewBlogButton.addEventListener("click", () => {
   addBlogContainer.style.display = "grid";
   addBlogContainer.classList.remove("add-blog-popup");
@@ -36,6 +38,6 @@ addNewBlogButton.addEventListener("click", () => {
 
 closeAddBlog.addEventListener("click", () => {
   addBlogContainer.style.display = "none";
-  addBlogContainer.classList.add("add-blog-popup");
+  addBlogContainer.classList.remove("add-blog-popup");
   dashboard.style.opacity = "100%";
 });

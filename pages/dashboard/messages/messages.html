@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="./messages.css" />
     <link rel="stylesheet" href="../dashboard.css" />
-    <link rel="stylesheet" href="./update-blog.css" />
-    <title>Dashboard/Blogs</title>
+    <link rel="stylesheet" href="../blog/update-blog.css" />
+    <title>Dashboard/Messages</title>
   </head>
   <body class="container">
     <header class="header">
@@ -24,7 +25,7 @@
           />
           <span>Dasboard</span>
         </a>
-        <a href="../messages/messages.html" class="sidebar__element">
+        <a href="#" class="sidebar__element active">
           <img
             src="../../../images/icons/messages.svg"
             alt="Messages Icon"
@@ -32,7 +33,7 @@
           />
           <span>Messages</span>
         </a>
-        <a href="#" class="sidebar__element active">
+        <a href="../blog/update-blog.html" class="sidebar__element">
           <img
             src="../../../images/icons/posts.svg"
             alt="Posts icon"
@@ -51,7 +52,7 @@
       </nav>
     </header>
     <div class="content__header">
-      <h3 class="content__header--title para">List of Blogs</h3>
+      <h3 class="content__header--title para">Messages</h3>
       <a href="#" class="message-icon">
         <img src="../../../images/icons/messages.svg" alt="messages icon" />
         <span>12</span>
@@ -61,80 +62,40 @@
       </a>
     </div>
 
-    <!-- Add New Blog Popup -->
-    <section class="add-blog-container add-blog-popup">
-      <form action="" class="add-blog-form">
-        <button class="close-add-blog">X</button>
-        <input
-          type="text"
-          class="add-blog-form__title"
-          placeholder="Blog Title"
-        />
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          class="add-blog-form__description"
-          placeholder="Blog Description"
-        ></textarea>
-        <input type="file" placeholder="Select blog image" />
-        <input type="submit" value="Add Blog" class="add-blog-button" />
-      </form>
-    </section>
-
-    <!-- --------End- -->
-
-    <!-- -------Update Blog Popup -->
-    <section class="blog-container popup-wrapper">
-      <button class="close-button popup-close">X</button>
-      <div class="blog">
-        <figure class="blog__img">
-          <img src="/images/blogs/1.png" alt="Blog image" />
-        </figure>
-      </div>
-      <div class="blog__content">
-        <h3 class="mini-title">
-          <input
-            type="text"
-            value=" Ultimate guide to Node Js folder structure"
-          />
-        </h3>
-        <p class="blog__content--details">
-          <textarea name="" id="" cols="30" rows="10" class="para">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi eaque consequuntur impedit quaerat est illo a et nam? Quaerat voluptatibus id laboriosam doloribus nulla aliquam atque asperiores deserunt. Minima autem maxime quia rerum, laboriosam magni fugit nesciunt odit iure dignissimos! Cum ab eos, unde ad sint modi!
-          </textarea>
-        </p>
-      </div>
-      <button class="update-blog">Update</button>
-    </section>
-
     <!-- -----End --------- -->
 
-    <!-- --------List of Blogs----------->
-
+    <!-- --------List of Messages----------->
+    <!-- ------Mesage Modal----- -->
+    <div class="view-message-container view-message-popup">
+      <button class="close-message-button title">X</button>
+      <figure class="content__blogs--blog__img user-img user-img-msg">
+        <img src="../../../images/bz.jpg" alt="blog image" />
+      </figure>
+      <div class="message-title">
+        <h3 class="para">bzkarim250@gmail.com</h3>
+      </div>
+      <p class="messages__message para">
+        Hey, I would like to hire you as front end developer, are availabe?
+      </p>
+    </div>
+    <!-- ------End----- -->
     <main class="main-container">
       <div class="content">
         <div class="content__blogs">
-          <h3 class="content__blogs-Title mini-title">Blogs</h3>
-          <button class="add-new-blog">Add New Blog</button>
+          <h3 class="content__blogs-Title mini-title">Messages</h3>
           <div class="blogs--container">
             <div class="content__blogs--blog">
-              <figure class="content__blogs--blog__img">
-                <img src="../../../images/blogs/1.png" alt="blog image" />
+              <figure class="content__blogs--blog__img user-img">
+                <img src="../../../images/bz.jpg" alt="blog image" />
               </figure>
+              <p class="content__blogs--blog__name para email">
+                bzkarim250@gmail.com
+              </p>
               <p class="content__blogs--blog__name para">
-                Ultimate guide to node js folder structure
+                hey, I would like to .......
               </p>
               <div class="actions">
-                <button class="update">
-                  <img
-                    src="../../../images/icons/update.svg"
-                    alt="update icon"
-                    class="update"
-                  />
-                </button>
-                <button class="view">
+                <button class="view view-message">
                   <img src="../../../images/icons/view.svg" alt="view icon" />
                 </button>
                 <button>
@@ -146,20 +107,17 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi e
               </div>
             </div>
             <div class="content__blogs--blog">
-              <figure class="content__blogs--blog__img">
-                <img src="../../../images/blogs/2.png" alt="blog image" />
+              <figure class="content__blogs--blog__img user-img">
+                <img src="../../../images/bz.jpg" alt="blog image" />
               </figure>
+              <p class="content__blogs--blog__name para email">
+                usersms250@gmail.com
+              </p>
               <p class="content__blogs--blog__name para">
-                First Step to Full stack developer for you!
+                good evening , my .......
               </p>
               <div class="actions">
-                <button class="update">
-                  <img
-                    src="../../../images/icons/update.svg"
-                    alt="update icon"
-                  />
-                </button>
-                <button class="view">
+                <button class="view view-message">
                   <img src="../../../images/icons/view.svg" alt="view icon" />
                 </button>
                 <button>
@@ -171,20 +129,17 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi e
               </div>
             </div>
             <div class="content__blogs--blog">
-              <figure class="content__blogs--blog__img">
-                <img src="../../../images/blogs/1.png" alt="blog image" />
+              <figure class="content__blogs--blog__img user-img">
+                <img src="../../../images/bz.jpg" alt="blog image" />
               </figure>
+              <p class="content__blogs--blog__name para email">
+                usersms250@gmail.com
+              </p>
               <p class="content__blogs--blog__name para">
-                Ultimate guide to node js folder structure
+                I’m interested in w .......
               </p>
               <div class="actions">
-                <button class="update">
-                  <img
-                    src="../../../images/icons/update.svg"
-                    alt="update icon"
-                  />
-                </button>
-                <button class="view">
+                <button class="view view-message">
                   <img src="../../../images/icons/view.svg" alt="view icon" />
                 </button>
                 <button>
@@ -196,23 +151,20 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi e
               </div>
             </div>
             <div class="content__blogs--blog">
-              <figure class="content__blogs--blog__img">
-                <img src="../../../images/blogs/2.png" alt="blog image" />
+              <figure class="content__blogs--blog__img user-img">
+                <img src="../../../images/bz.jpg" alt="blog image" />
               </figure>
+              <p class="content__blogs--blog__name para email">
+                bzkarim250@gmail.com
+              </p>
               <p class="content__blogs--blog__name para">
-                First Step to Full stack developer for you!
+                hey, I would like to .......
               </p>
               <div class="actions">
-                <button class="update">
-                  <img
-                    src="../../../images/icons/update.svg"
-                    alt="update icon"
-                  />
-                </button>
-                <button class="view">
+                <button class="view view-message">
                   <img src="../../../images/icons/view.svg" alt="view icon" />
                 </button>
-                <button>
+                <button class="delete">
                   <img
                     src="../../../images/icons/delete.svg"
                     alt="delete icon"
@@ -231,6 +183,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi e
 
     <!-- --------END ------------->
 
-    <script src="../dashboard.js"></script>
+    <script src="./messeges.js"></script>
   </body>
 </html>

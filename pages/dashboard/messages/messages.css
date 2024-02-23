@@ -1,0 +1,53 @@
+.email {
+  color: var(--color-second-para);
+  text-align: center;
+}
+.user-img img {
+  border-radius: 50%;
+}
+
+/* ----------Message Modal-------------- */
+.view-message-container {
+  grid-column: 5/10;
+  grid-row: 4/8;
+  display: grid;
+  z-index: 1;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, min-content);
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  gap: 2rem;
+}
+.close-message-button {
+  grid-column: 9/10;
+  grid-row: 1/3;
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+.message-title,
+.messages__message {
+  border: 2px solid var(--color-second-para);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.message-title {
+  grid-column: 2/9;
+  grid-row: 3/3;
+  color: var(--color-main);
+}
+.messages__message {
+  grid-column: 2/9;
+  grid-row: 5/10;
+}
+.user-img-msg {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  margin-top: 1rem;
+}
+
+/* ---------------End----------- */
+
+/* ----------Modal Logic--------- */
+.view-message-popup {
+  display: none !important;
+}
