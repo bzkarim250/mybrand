@@ -194,3 +194,9 @@
   font-size: 3rem;
   padding: 1rem;
 }
+.active span {
+  color: var(--color-primary);
+}
+.sidebar__element span:hover {
+  color: var(--color-primary);
+}
