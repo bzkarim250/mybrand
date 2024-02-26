@@ -15,6 +15,7 @@
   --color-white: #ffff;
   --color-second-bg: #d9d9d9;
   --color-second-para: #b0bec5;
+  --color-error: #EB5E5A;
 
   --font-size-title: 3rem;
   --font-size-mini-title: 2rem;
@@ -676,6 +677,36 @@ textarea::placeholder,
     color: var(--color-main);
   }
 }
+
+/*--------Contact me validations--------*/
+.email-error,.message-error {
+  border: 1px solid transparent; /* Set initial border */
+  padding: 0 1rem;
+  color: var(--color-error);
+}
+
+.d-none{
+  display: none;
+}
+.confirmation{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  gap: 0;
+
+}
+.confirmation img{
+  width: 5rem;
+}
+.confirmation__message{
+  font-size: 4rem;
+  color:var(--color-primary);
+}
+
+
+/* -------End------- */
+
+
 @media screen and (max-width: 635px) {
   .contact-me-container {
     flex-direction: column;
