@@ -78,7 +78,7 @@
           class="add-blog-form__description"
           placeholder="Blog Description"
         ></textarea>
-        <input type="file" placeholder="Select blog image" />
+        <input type="file" placeholder="Select blog image" class="blog-image" />
         <input type="submit" value="Add Blog" class="add-blog-button" />
       </form>
     </section>
@@ -86,28 +86,25 @@
     <!-- --------End- -->
 
     <!-- -------Update Blog Popup -->
-    <section class="blog-container popup-wrapper">
-      <button class="close-button popup-close">X</button>
-      <div class="blog">
-        <figure class="blog__img">
-          <img src="/images/blogs/1.png" alt="Blog image" />
-        </figure>
-      </div>
-      <div class="blog__content">
-        <h3 class="mini-title">
-          <input
-            type="text"
-            value=" Ultimate guide to Node Js folder structure"
-          />
-        </h3>
-        <p class="blog__content--details">
-          <textarea name="" id="" cols="30" rows="10" class="para">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi eaque consequuntur impedit quaerat est illo a et nam? Quaerat voluptatibus id laboriosam doloribus nulla aliquam atque asperiores deserunt. Minima autem maxime quia rerum, laboriosam magni fugit nesciunt odit iure dignissimos! Cum ab eos, unde ad sint modi!
-          </textarea>
-        </p>
-      </div>
-      <button class="update-blog">Update</button>
-    </section>
+<!-- Update Blog Popup -->
+<section class="blog-container popup-wrapper">
+  <button class="close-button popup-close">X</button>
+  <div class="blog">
+    <figure class="blog__img">
+      <img src="" alt="Blog image" />
+    </figure>
+  </div>
+  <div class="blog__content">
+    <h3 class="mini-title">
+      <input type="text" value="" />
+    </h3>
+    <p class="blog__content--details">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </p>
+  </div>
+  <button class="update-blog">Update</button>
+</section>
+
 
     <!-- -----End --------- -->
 
@@ -232,5 +229,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi modi e
     <!-- --------END ------------->
 
     <script src="../dashboard.js"></script>
+    <script src="./blog.js"></script>
   </body>
 </html>
