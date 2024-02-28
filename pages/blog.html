@@ -1,91 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="./blog.css" />
-    <title>Blog</title>
-  </head>
-  <body class="container">
-    <header class="nav">
-      <a href="/index.html" class="nav__logo">
-        <img src="/images/icons/back.svg" alt="Logo Image" />
-      </a>
-    </header>
-    <section class="blog-container">
-      <div class="blog">
-        <figure class="blog__img">
-          <img src="/images/blogs/1.png" alt="Blog image" />
-        </figure>
-        <form action="#" class="blog__add-comment">
-          <input type="text" required />
-          <input type="submit" value="Post" />
-        </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="./blog.css" />
+  <title>Blog</title>
+</head>
+
+<body class="container">
+  <header class="nav">
+    <a href="/index.html" class="nav__logo">
+      <img src="/images/icons/back.svg" alt="Logo Image" />
+    </a>
+  </header>
+  <section class="blog-container">
+    <div class="blog">
+      <figure class="blog__img">
+        <img src="/images/blogs/1.png" alt="Blog image" />
+      </figure>
+      <form action="#" class="blog__add-comment">
+        <input type="text" required />
+        <input type="submit" value="Post" />
+      </form>
+    </div>
+    <div class="blog__content">
+      <h3 class="mini-title">Ultimate guide to Node Js folder structure</h3>
+      <p class="blog__content--details para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        nisi modi eaque consequuntur impedit quaerat est illo a et nam?
+        Quaerat voluptatibus id laboriosam doloribus nulla aliquam atque
+        asperiores deserunt. Minima autem maxime quia rerum, laboriosam magni
+        fugit nesciunt odit iure dignissimos! Cum ab eos, unde ad sint modi!
+      </p>
+      <div class="blog__content--insight">
+        <i class="fa-regular fa-thumbs-up"></i>
+        <p class="blog__content--insight-like">12</p>
+        <i class="fa-regular fa-comment"></i>
+        <p class="blog__content--insight-comment">70</p>
       </div>
-      <div class="blog__content">
-        <h3 class="mini-title">Ultimate guide to Node Js folder structure</h3>
-        <p class="blog__content--details para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          nisi modi eaque consequuntur impedit quaerat est illo a et nam?
-          Quaerat voluptatibus id laboriosam doloribus nulla aliquam atque
-          asperiores deserunt. Minima autem maxime quia rerum, laboriosam magni
-          fugit nesciunt odit iure dignissimos! Cum ab eos, unde ad sint modi!
-        </p>
-        <div class="blog__content--insight">
-          <i class="fa-regular fa-thumbs-up"></i>
-          <p class="blog__content--insight-like">12</p>
-          <i class="fa-regular fa-comment"></i>
-          <p class="blog__content--insight-comment">70</p>
+      <div class="blog__content--comments">
+        <div class="blog__content--comments__comment">
+          <img src="../images/bz.jpg" alt="person image" class="comment-image" />
+          <p class="comment-post para">lorem ipsum dolor</p>
         </div>
-        <div class="blog__content--comments">
-          <div class="blog__content--comments__comment">
-            <img
-              src="../images/bz.jpg"
-              alt="person image"
-              class="comment-image"
-            />
-            <p class="comment-post para">lorem ipsum dolor</p>
-          </div>
-          <div class="blog__content--comments__comment">
-            <img
-              src="../images/bz.jpg"
-              alt="person image"
-              class="comment-image"
-            />
-            <p class="comment-post para">lorem ipsum dolor</p>
-          </div>
+        <div class="blog__content--comments__comment">
+          <img src="../images/bz.jpg" alt="person image" class="comment-image" />
+          <p class="comment-post para">lorem ipsum dolor</p>
         </div>
       </div>
-    </section>
-    <footer class="footer">
-      <div class="footer-content">
-        <figure class="footer-logo">
-          <img src="/images/icons/logo.svg" alt="logo image" />
-        </figure>
-        <div class="footer__copy-right">
-          <p class="para copy-right">© 2024 Bzkarim</p>
-        </div>
-        <div class="footer__socials">
-          <a href="#">
-            <img src="/images/icons/x-twitter.svg" alt="Twitter icon" />
-          </a>
-          <a href="#">
-            <img src="/images/icons/linkedin.svg" alt="LinkedIn icon" />
-          </a>
-          <a href="#">
-            <img src="/images/icons/mdi_github.svg" alt="GitHub icon" />
-          </a>
-        </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <figure class="footer-logo">
+        <img src="/images/icons/logo.svg" alt="logo image" />
+      </figure>
+      <div class="footer__copy-right">
+        <p class="para copy-right">© 2024 Bzkarim</p>
       </div>
-    </footer>
-    <script src="/index.js"></script>
-  </body>
+      <div class="footer__socials">
+        <a href="#">
+          <img src="/images/icons/x-twitter.svg" alt="Twitter icon" />
+        </a>
+        <a href="#">
+          <img src="/images/icons/linkedin.svg" alt="LinkedIn icon" />
+        </a>
+        <a href="#">
+          <img src="/images/icons/mdi_github.svg" alt="GitHub icon" />
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="/index.js"></script>
+</body>
+
 </html>

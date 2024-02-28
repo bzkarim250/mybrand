@@ -1,77 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="stylesheet" href="./dashboard.css" />
-    <title>Dashboard</title>
-  </head>
-  <body class="container">
-    <header class="header">
-      <img
-        src="../../images/icons/logo.svg"
-        alt="Logo image"
-        class="logo icon"
-      />
-      <nav class="sidebar">
-        <a href="#" class="sidebar__element active">
-          <img
-            src="../../images/icons/dashboard.svg"
-            alt="Dasboard icon"
-            class="icon"
-          />
-          <span>Dasboard</span>
-        </a>
-        <a href="./messages/messages.html" class="sidebar__element">
-          <img
-            src="../../images/icons/messages.svg"
-            alt="Messages Icon"
-            class="icon"
-          />
-          <span> Messages</span>
-        </a>
-        <a href="../dashboard/blog/update-blog.html" class="sidebar__element">
-          <img
-            src="../../images/icons/posts.svg"
-            alt="Posts icon"
-            class="icon"
-          />
-          <span>Blogs</span>
-        </a>
-        <a href="./blog/update-blog.css" class="sidebar__element">
-          <img src="../../images/icons/cv.svg" alt="cv icon" class="icon" />
-          CV
-        </a>
-        <a href="../../index.html" class="sidebar__element logout">
-          <img src="../../images/icons/logout.svg" alt="" class="icon" />
-          <span> Logout</span>
-        </a>
-      </nav>
-    </header>
-    <div class="content__header">
-      <h3 class="content__header--title para">Admin Dashboard</h3>
-      <a href="#" class="message-icon">
-        <img src="../../images/icons/messages.svg" alt="messages icon" />
-        <span>12</span>
-      </a>
-      <a href="" class="profile">
-        <img src="../../images/bz.jpg" alt="Profile image" />
-      </a>
-    </div>
-    <main class="main-container">
-      <div class="content">
-        <div class="content__summary">
-          <div class="content__summary--blogs">
-            <p class="mini-title">Total Blogs: 4</p>
-          </div>
 
-          <div class="content__summary--blogs">
-            <p class="mini-title">Messages: 4</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="./dashboard.css" />
+  <title>Dashboard</title>
+</head>
+
+<body class="container">
+  <img src="../../images/icons/logo.svg" alt="Logo image" class="logo icon" />
+  <img src="../../images/icons/dashboard.svg" alt="Dasboard icon" class="dashboard-logo icon" />
+  <header class="header">
+    <nav class="sidebar">
+      <a href="#" class="sidebar__element active">
+        <img src="../../images/icons/dashboard.svg" alt="Dasboard icon" class="icon" />
+        <span>Dasboard</span>
+      </a>
+      <a href="./messages/messages.html" class="sidebar__element">
+        <img src="../../images/icons/messages.svg" alt="Messages Icon" class="icon" />
+        <span> Messages</span>
+      </a>
+      <a href="../dashboard/blog/update-blog.html" class="sidebar__element">
+        <img src="../../images/icons/posts.svg" alt="Posts icon" class="icon" />
+        <span>Blogs</span>
+      </a>
+      <a href="./blog/update-blog.css" class="sidebar__element">
+        <img src="../../images/icons/cv.svg" alt="cv icon" class="icon" />
+        CV
+      </a>
+      <a href="../../index.html" class="sidebar__element logout">
+        <img src="../../images/icons/logout.svg" alt="" class="icon" />
+        <span> Logout</span>
+      </a>
+    </nav>
+  </header>
+  <div class="content__header">
+    <h3 class="content__header--title para">Admin Dashboard</h3>
+    <a href="#" class="message-icon">
+      <img src="../../images/icons/messages.svg" alt="messages icon" />
+      <span>12</span>
+    </a>
+    <a href="" class="profile">
+      <img src="../../images/bz.jpg" alt="Profile image" />
+    </a>
+  </div>
+  <main class="main-container">
+    <div class="content">
+      <div class="content__summary">
+        <div class="content__summary--blogs">
+          <p class="mini-title">Total Blogs: 4</p>
+        </div>
+
+        <div class="content__summary--messages">
+          <p class="mini-title">Messages: 4</p>
         </div>
       </div>
-    </main>
-    <script src="dashboard.js"></script>
-  </body>
+    </div>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+
 </html>
