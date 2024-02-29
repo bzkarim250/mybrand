@@ -1,13 +1,25 @@
-// Fetch All Blogs
+// Function to store image in local storage
+function storeImageInLocalStorage(blogId, imageFile, callback) {
+    const reader = new FileReader();
+    reader.readAsDataURL(imageFile);
+    reader.onload = function () {
+        const key = `blogImage_${blogId}`;
+        localStorage.setItem(key, reader.result);
+        callback(key);
+    };
+    reader.onerror = function (error) {
+        console.error("Error occurred while reading the image file:", error);
+    };
+}
+
+// Function to display blogs
 function displayBlogs() {
     const blogsContainer = document.querySelector(".blogs--container");
+    blogsContainer.innerHTML = "";
 
     const blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
-    blogsContainer.innerHTML = "";
-
     blogs.forEach(blog => {
-
         const blogElement = document.createElement("div");
         blogElement.classList.add("content__blogs--blog");
         blogElement.setAttribute("data-blog-id", blog.id); // Add data-blog-id attribute
@@ -49,10 +61,12 @@ function displayBlogs() {
 
         // Delete Blog
         deleteButton.addEventListener("click", () => {
-            let updatedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
-            updatedBlogs = updatedBlogs.filter(item => item.id !== blog.id);
-            localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
-            blogElement.remove();
+            if(confirm()){
+                let updatedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
+                updatedBlogs = updatedBlogs.filter(item => item.id !== blog.id);
+                localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
+                blogElement.remove();
+            }
         });
 
         // View Blog
@@ -61,7 +75,6 @@ function displayBlogs() {
             const blogData = encodeURIComponent(JSON.stringify(blog));
             location.href = `/pages/blog.html?blog=${blogData}`;
         });
-
 
         actionsElement.appendChild(updateButton);
         actionsElement.appendChild(viewButton);
@@ -88,6 +101,7 @@ function openUpdatePopup(blog) {
             <figure class="blog__img">
                 <img src="${localStorage.getItem(blog.imageUrl)}" alt="Blog image" />
             </figure>
+            <input type="file" class="image-update"/>
         </div>
         <div class="blog__content">
             <h3 class="mini-title">
@@ -128,10 +142,17 @@ function openUpdatePopup(blog) {
             // Retrieve updated data from input fields
             const updatedTitle = document.querySelector(".update-title").value;
             const updatedDescription = document.querySelector(".update-description").value;
+            const blogImage = document.querySelector(".image-update").files[0];
 
             // Update blog object
             blog.title = updatedTitle;
             blog.description = updatedDescription;
+            if (blogImage) {
+                const blogId = blog.id;
+                storeImageInLocalStorage(blogId, blogImage, (imageKey) => {
+                    blog.imageUrl = imageKey;
+                });
+            }
 
             // Update local storage
             const blogs = JSON.parse(localStorage.getItem("blogs")) || [];
@@ -151,7 +172,37 @@ function openUpdatePopup(blog) {
     }
 }
 
+const addBlogForm = document.querySelector('.add-blog-form');
 
+addBlogForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const title = document.querySelector(".add-blog-form__title").value;
+    const description = document.querySelector(".add-blog-form__description").value;
+    const imageInput = document.querySelector(".blog-image");
+    const imageFile = imageInput.files[0];
+    if (!imageFile) {
+        alert("Please select an image");
+        return;
+    }
 
+    const blogId = Date.now().toString();
+    storeImageInLocalStorage(blogId, imageFile, (imageKey) => {
+        const newBlog = {
+            id: blogId,
+            title: title,
+            description: description,
+            imageUrl: imageKey,
+        };
+        let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+        blogs.push(newBlog);
+        localStorage.setItem("blogs", JSON.stringify(blogs));
+        console.log(blogs);
+        addBlogForm.reset();
+        displayBlogs();
+
+        addBlogContainer.style.display = "none";
+        dashboard.style.opacity = "100%";
+    });
+});
 
 displayBlogs();

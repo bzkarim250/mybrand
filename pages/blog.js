@@ -22,7 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="blog__content">
                 <h3 class="mini-title">${blog.title}</h3>
                 <p class="blog__content--details para">${blog.description}</p>
-                <!-- Add more content as needed -->
+                <div class="blog__content--insight">
+                <i class="fa-regular fa-thumbs-up"></i>
+                <p class="blog__content--insight-like">12</p>
+                <i class="fa-regular fa-comment"></i>
+                <p class="blog__content--insight-comment">70</p>
+              </div>
+              <div class="blog__content--comments">
+                <div class="blog__content--comments__comment">
+                  <img src="../images/bz.jpg" alt="person image" class="comment-image" />
+                  <p class="comment-post para">lorem ipsum dolor</p>
+                </div>
+                <div class="blog__content--comments__comment">
+                  <img src="../images/bz.jpg" alt="person image" class="comment-image" />
+                  <p class="comment-post para">lorem ipsum dolor</p>
+                </div>
+              </div>
             </div>
         `;
     }
